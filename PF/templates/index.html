@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Feed Prediction</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Poultry Feed Prediction</h1>
+        <form id="prediction-form">
+            <label for="start_age">Start Age:</label>
+            <input type="number" id="start_age" name="start_age" step="0.01" required>
+
+            <label for="end_age">End Age:</label>
+            <input type="number" id="end_age" name="end_age" step="0.01" required>
+
+            <label for="bird_count">Bird Count:</label>
+            <input type="number" id="bird_count" name="bird_count" required>
+
+            <label for="fcr">Feed Conversion Ratio (FCR):</label>
+            <input type="number" id="fcr" name="fcr" step="0.01" required>
+
+            <label for="feed_cost">Feed Cost per Unit:</label>
+            <input type="number" id="feed_cost" name="feed_cost" step="0.01" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result">
+            <h2>Prediction Results</h2>
+            <p id="error-message" style="color: red; display: none;"></p>
+            <div id="predictions"></div>
+            <div id="total-cost"></div>
+        </div>
+    </div>
+
+    <script src="..\static\js\script.js"></script>
+</body>
+</html>
